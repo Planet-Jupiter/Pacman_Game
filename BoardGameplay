@@ -49,4 +49,14 @@ public class Board extends JPanel implements ActionListener{
      private int pacsLeft, score; //how many pacman lives are left
      private int[] dx, dy;
      private int[] ghost_x, ghost_y, ghost_dx, ghost_dy, ghostSpeed;
+     
+     private Image ghost;
+     private Image pacman1, pacman2up, pacman2left, pacman2right, pacman2down;
+     private Image pacman3up, pacman3left, pacman3right, pacman3down;
+     private Image pacman4up, pacman4left, pacman4right, pacman4down;
+
+
+     private int pacman_x, pacman_y, pacman_dx, pacman_dy;
+     private int req_dx, req_dy, view_dx, view_dy;
+     
 }
