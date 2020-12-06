@@ -90,4 +90,44 @@ public class Board extends JPanel implements ActionListener{
          initBoard();
      }    
      
+      private void initBoard(){
+         addKeyListener(new TAdapter());
+  
+         setFocusable(true);
+         setBackground(Color.black);
+     }
+
+     private void initVariables() {
+         screenData = new short[N_BLOCKS*N_BLOCKS];
+         mazeColor = new Color(5, 100, 5);
+         d = new Dimension(400, 400);
+         ghost_x = new int[MAX_GHOSTS];
+         ghost_dx = new int[MAX_GHOSTS];
+         ghost_y = new int[MAX_GHOSTS];
+         ghost_dy = new int[MAX_GHOSTS];
+         ghostSpeed = new int[MAX_GHOSTS];
+         dx = new int[4];
+         dy = new int[4];
+
+         timer = new Timer(40, this);
+         timer.start();
+     }
+     
+      private void loadImages(){
+        ghost = new ImageIcon("ghost.png").getImage();
+        pacman1 = new ImageIcon("pacman.png").getImage();
+        pacman2up = new ImageIcon("up1.png").getImage();
+        pacman3up = new ImageIcon("up2.png").getImage();
+        pacman4up = new ImageIcon("up3.png").getImage();
+        pacman2down = new ImageIcon("down1.png").getImage();
+        pacman3down = new ImageIcon("down2.png").getImage();
+        pacman4down = new ImageIcon("down3.png").getImage();
+        pacman2left = new ImageIcon("left1.png").getImage();
+        pacman3left = new ImageIcon("left2.png").getImage();
+        pacman4left = new ImageIcon("left3.png").getImage();
+        pacman2right = new ImageIcon("right1.png").getImage();
+        pacman3right = new ImageIcon("right2.png").getImage();
+        pacman4right = new ImageIcon("right3.png").getImage();
+     }
+     
 }
